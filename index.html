@@ -1,0 +1,520 @@
+
+<!-- ======================================= -->
+<!-- FILE NAME : index.html -->
+<!-- ======================================= -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Sarkari Rojgar Wala
+    </title>
+
+
+    <!-- CSS FILE -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+
+    <!-- FIREBASE APP -->
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+
+    <!-- FIREBASE DATABASE -->
+
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+</head>
+
+<body>
+
+
+
+    <!-- ======================================= -->
+    <!-- MAIN CONTAINER -->
+    <!-- ======================================= -->
+
+    <div class="main-container">
+
+
+        <!-- LOGO SECTION -->
+
+        <div class="logo-section">
+
+            <h1>
+                Sarkari Rojgar Wala
+            </h1>
+
+            <p class="contact-text">
+
+    Contact Us:
+
+    <a href="https://www.facebook.com/profile.php?id=61589865034671"
+       target="_blank"
+       class="facebook">
+
+       Facebook
+
+    </a>
+
+    |
+
+    <a href="https://www.instagram.com/krisnavanshi_prasun_bhu/"
+       target="_blank"
+       class="instagram">
+
+       Instagram
+
+    </a>
+
+    |
+
+    <a href="https://youtube.com/@sarkarirojgarwala25?si=EukSxJNU-nBKDLmU"
+       target="_blank"
+       class="youtube">
+
+       YouTube
+
+    </a>
+
+    |
+
+    <a href="https://whatsapp.com/channel/0029VbB3n4j5PO0wIIjkJ31m"
+       target="_blank"
+       class="whatsapp">
+
+       WhatsApp
+
+    </a>
+
+</p>
+<h2 class="footer-links">
+
+<a href="privacy.html">
+Privacy Policy
+</a>
+
+|
+
+<a href="about.html">
+About Us
+</a>
+
+</h2>
+
+        </div>
+
+
+
+        <!-- ======================================= -->
+        <!-- STUDENT FORM -->
+        <!-- ======================================= -->
+
+        <div class="student-form">
+
+
+            <h2>
+                Student Details
+            </h2>
+
+
+
+            <!-- STUDENT NAME -->
+
+            <div class="input-group">
+
+                <label>
+                    Full Name
+                </label>
+
+                <input type="text"
+                       id="studentName"
+                       placeholder="Enter Your Name">
+
+            </div>
+
+
+
+            <!-- MOBILE NUMBER -->
+
+            <div class="input-group">
+
+                <label>
+                    Mobile Number
+                </label>
+
+                <input type="number"
+                       id="studentMobile"
+                       placeholder="Enter Mobile Number">
+
+            </div>
+
+
+
+            <!-- EXAM SELECT -->
+
+            <div class="input-group">
+
+                <label>
+                    Select Exam
+                </label>
+
+                <select id="examSelect">
+
+                    <option value="">
+                        Select Exam
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- DATE SELECT -->
+
+            <div class="input-group">
+
+                <label>
+                    Select Test Date
+                </label>
+
+                <select id="dateSelect">
+
+                    <option value="">
+                        Select Date
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- SHIFT SELECT -->
+
+            <div class="input-group">
+
+                <label>
+                    Select Shift
+                </label>
+
+                <select id="shiftSelect">
+
+                    <option value="">
+                        Select Shift
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- TEST INFO -->
+
+            <div class="test-info-box">
+
+                <h3>
+                    Test Information
+                </h3>
+
+                <p>
+                    Total Questions :
+                    <span id="totalQuestions">
+                        0
+                    </span>
+                </p>
+
+                <p>
+                    Total Time :
+                    <span id="totalTime">
+                        0 Minutes
+                    </span>
+                </p>
+
+            </div>
+
+
+
+            <!-- START BUTTON -->
+
+            <button id="startTestBtn">
+
+                Start Test
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- ======================================= -->
+    <!-- QUIZ CONTAINER -->
+    <!-- ======================================= -->
+
+    <div class="quiz-container">
+
+
+
+        <!-- TOP BAR -->
+
+        <div class="quiz-top-bar">
+
+
+            <div class="left-top">
+
+                <h2 id="liveExamName">
+
+                    SSC MOCK TEST
+
+                </h2>
+
+                <p id="liveShiftName">
+
+                    Shift 1
+
+                </p>
+
+            </div>
+
+
+
+            <div class="right-top">
+
+                <h2>
+
+                    Time Left :
+                    <span id="timer">
+
+                        00:00
+
+                    </span>
+
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- QUESTION NUMBER -->
+
+        <div class="question-count-box">
+
+            <h3 id="questionNumber">
+
+                Question 1 of 100
+
+            </h3>
+
+        </div>
+
+
+
+
+
+        <!-- QUESTION -->
+
+        <div class="question-box">
+
+            <h2 id="questionText">
+
+                Question Here
+
+            </h2>
+
+        </div>
+
+
+
+
+
+        <!-- OPTIONS -->
+
+        <div class="options-box">
+
+            <button class="option-btn">
+
+                Option 1
+
+            </button>
+
+            <button class="option-btn">
+
+                Option 2
+
+            </button>
+
+            <button class="option-btn">
+
+                Option 3
+
+            </button>
+
+            <button class="option-btn">
+
+                Option 4
+
+            </button>
+
+        </div>
+
+
+
+
+
+        <!-- BUTTONS -->
+
+        <div class="bottom-btns">
+
+            <button id="prevBtn">
+
+    Previous Question
+
+</button>
+
+            <button id="nextBtn">
+
+                Next Question
+
+            </button>
+
+            <button id="submitBtn">
+
+                Submit Test
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- ======================================= -->
+    <!-- RESULT CONTAINER -->
+    <!-- ======================================= -->
+
+    <div class="result-container">
+
+        <div class="result-card">
+
+
+            <h1>
+
+                Test Submitted Successfully
+
+            </h1>
+
+
+
+            <h2 id="studentResultName">
+
+                Student Name
+
+            </h2>
+
+
+
+            <div class="result-details">
+
+                <p>
+
+                    Total Questions :
+                    <span id="resultTotalQuestion">
+
+                        0
+
+                    </span>
+
+                </p>
+
+
+                <p>
+
+                    Correct Answers :
+                    <span id="correctAnswers">
+
+                        0
+
+                    </span>
+
+                </p>
+
+
+                <p>
+
+                    Wrong Answers :
+                    <span id="wrongAnswers">
+
+                        0
+
+                    </span>
+
+                </p>
+
+
+                <p>
+
+                    Final Score :
+                    <span id="finalScore">
+
+                        0
+
+                    </span>
+
+                </p>
+
+            </div>
+            <div class="solution-container"
+id="solutionContainer"
+style="display:none;">
+
+</div>
+
+            <button id="viewSolutionBtn">
+    View Solution
+</button>
+
+
+
+            <button id="restartBtn">
+
+                Restart Test
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- SCRIPT FILE -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
