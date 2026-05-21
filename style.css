@@ -53,9 +53,9 @@ body{
 
     margin: auto;
 
-    padding: 5px;
+    padding: 2px;
 
-    border-radius: 28px;
+    border-radius: 25px;
 
     background: linear-gradient(
 
@@ -298,13 +298,13 @@ button:hover{
 
     position: relative;
 
-    width: 100%;
+    width: 900%;
 
     max-width: 900px;
 
     margin: auto;
 
-    padding: 4px;
+    padding: 1.5px;
 
     border-radius: 25px;
 
@@ -631,6 +631,7 @@ button:hover{
     }
 
 
+
     .question-box h2{
 
         font-size: 20px;
@@ -666,6 +667,11 @@ button:hover{
 .whatsapp{
 
     color: #25d366;
+
+}
+.telegram{
+
+    color: lch(94.57% 96.41 108.08);
 
 }
 

@@ -621,11 +621,6 @@ nextBtn.addEventListener("click", function(){
     questionData[currentQuestion].answer;
 
 
-    if(selectedAnswer === correctAnswer){
-
-        score++;
-
-    }
 
     currentQuestion++;
 
@@ -880,6 +875,17 @@ function submitTest(){
 
     let total =
     questionData.length;
+    score = 0;
+
+questionData.forEach(function(q, index){
+
+    if(userAnswers[index] === q.answer){
+
+        score++;
+
+    }
+
+});
 
     let wrong =
     total - score;
