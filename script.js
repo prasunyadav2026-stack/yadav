@@ -366,9 +366,11 @@ startTestBtn.addEventListener("click", function(){
 
         }else{
 
-            localStorage.removeItem(
-            "testState"
-            );
+           localStorage.removeItem(
+    "testState"
+    );
+
+    location.reload();
 
         }
 
@@ -512,17 +514,60 @@ function loadQuestion(){
 
     /* PREV BUTTON */
 
-    if(currentQuestion === 0){
+    /* BUTTON CONTROL */
 
-        prevBtn.style.display =
-        "none";
 
-    }else{
+/* FIRST QUESTION */
 
-        prevBtn.style.display =
-        "block";
+if(currentQuestion === 0){
 
-    }
+    prevBtn.style.display =
+    "none";
+
+    nextBtn.style.display =
+    "block";
+
+    submitBtn.style.display =
+    "none";
+
+}
+
+
+/* LAST QUESTION */
+
+else if(
+
+    currentQuestion ===
+    questionData.length - 1
+
+){
+
+    prevBtn.style.display =
+    "block";
+
+    nextBtn.style.display =
+    "none";
+
+    submitBtn.style.display =
+    "block";
+
+}
+
+
+/* MIDDLE QUESTIONS */
+
+else{
+
+    prevBtn.style.display =
+    "block";
+
+    nextBtn.style.display =
+    "block";
+
+    submitBtn.style.display =
+    "none";
+
+}
 
 }
 

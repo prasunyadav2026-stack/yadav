@@ -45,21 +45,70 @@ body{
 
 .main-container{
 
+    position: relative;
+
     width: 100%;
 
     max-width: 600px;
 
     margin: auto;
 
+    padding: 5px;
+
+    border-radius: 28px;
+
+    background: linear-gradient(
+
+        90deg,
+
+        #ff00c8,
+
+        #7a00ff,
+
+        #00c3ff,
+
+        #00ff88,
+
+        #ff00c8
+
+    );
+
+    background-size: 400%;
+
+    animation: borderMove 6s linear infinite;
+
+}
+
+.main-inner{
+
     background: white;
+
+    border-radius: 24px;
 
     padding: 30px;
 
-    border-radius: 20px;
+    width: 100%;
 
-    box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+    height: 100%;
 
 }
+
+@keyframes borderMove{
+
+    0%{
+
+        background-position: 0%;
+
+    }
+
+    100%{
+
+        background-position: 400%;
+
+    }
+
+}
+
 
 
 
@@ -245,21 +294,65 @@ button:hover{
 
 .quiz-container{
 
+     display: none;
+
+    position: relative;
+
     width: 100%;
 
     max-width: 900px;
 
     margin: auto;
 
+    padding: 4px;
+
+    border-radius: 25px;
+
+    background: linear-gradient(
+
+        90deg,
+
+        #ff00c8,
+
+        #7a00ff,
+
+        #00c3ff,
+
+        #00ff88,
+
+        #ff00c8
+
+    );
+
+    background-size: 400%;
+
+    animation: borderMove 6s linear infinite;
+
+}
+
+.quiz-inner{
+
     background: white;
+
+    border-radius: 21px;
 
     padding: 30px;
 
-    border-radius: 20px;
+}
 
-    box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+@keyframes borderMove{
 
-    display: none;
+    0%{
+
+        background-position: 0%;
+
+    }
+
+    100%{
+
+        background-position: 400%;
+
+    }
 
 }
 
@@ -366,7 +459,7 @@ button:hover{
 
     flex-direction: column;
 
-    gap: 15px;
+    gap: 8px;
 
 }
 
