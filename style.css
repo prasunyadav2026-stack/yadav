@@ -294,50 +294,32 @@ button:hover{
 
 .quiz-container{
 
-     display: none;
-
+    display: none;
     position: relative;
 
-    width: 75%;
-
-    max-width: 700px;
+    width: 95%;
+    max-width: 900px;
 
     margin: auto;
 
-    padding: 1px;
+    padding: 0px;   /* border thickness remove */
 
     border-radius: 25px;
 
-    background: linear-gradient(
+    background: transparent;  /* gradient remove */
 
-        90deg,
-
-        #ff00c8,
-
-        #7a00ff,
-
-        #00c3ff,
-
-        #00ff88,
-
-        #ff00c8
-
-    );
-
-    background-size: 400%;
-
-    animation: borderMove 6s linear infinite;
-
+    animation: none;   /* animation remove */
 }
 
 .quiz-inner{
 
     background: white;
 
-    border-radius: 21px;
+    border-radius: 25px;
 
-    padding: 30px;
+    padding: 25px;
 
+    border: 1px solid #dcdcdc;  /* simple border */
 }
 
 @keyframes borderMove{
