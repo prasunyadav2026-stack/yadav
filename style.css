@@ -702,3 +702,19 @@ button:hover{
     background:#e2e8f0;
 
 }
+@media (max-width:768px){
+
+    .quiz-container{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .quiz-inner{
+        padding: 12px;
+    }
+
+    .question{
+        font-size: 30px;
+        line-height: 1.3;
+    }
+}
