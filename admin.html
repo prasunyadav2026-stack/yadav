@@ -241,7 +241,22 @@ td:nth-child(7){
 
 }
     </style>
+<script>
 
+const adminEmail = "prasunya25@gmail.com";
+const adminPassword = "Admin@123";
+
+const email = prompt("Enter Admin Email");
+const password = prompt("Enter Admin Password");
+
+if(email !== adminEmail || password !== adminPassword){
+
+    alert("Access Denied");
+
+    window.location.href = "index.html";
+}
+
+</script>
 </head>
 
 <body>
